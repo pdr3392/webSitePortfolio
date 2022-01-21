@@ -160,17 +160,16 @@ export default function CodeHero() {
           marginLeft: "5rem",
         }}
       >
-        {`
-          occupation: 
-          `}
+        {`occupation: [`}
       </code>
       <code
         style={{
           color: "#3BE582",
         }}
       >
-        {`["full-stack developer", "entrepreneur", "visual artist", "photographer"]`}
+        {`"full-stack developer", "entrepreneur", "visual artist", "photographer", "journalist"`}
       </code>
+      <code>]</code>
       <br />
       <code
         style={{

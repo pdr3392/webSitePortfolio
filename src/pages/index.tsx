@@ -7,9 +7,11 @@ import {
   VStack,
   HStack,
   Grid,
+  Link as ChakraLink,
   GridItem,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import ReactCountryFlag from "react-country-flag";
 import CodeHero from "../components/CodeHero";
 import { SiTypescript, SiJavascript, SiPython } from "react-icons/si";
@@ -79,18 +81,22 @@ export default function Index() {
             >
               UPWORK
             </Text>
-            <Text
-              color="gray.200"
-              cursor="pointer"
-              _hover={{
-                color: "red.500",
-                cursor: "pointer",
-              }}
-              fontFamily="PlayFair Display"
-              fontSize="1.125rem"
-            >
-              PROJECTS
-            </Text>
+            <Link href={`/projects`} passHref>
+              <ChakraLink style={{ textDecoration: "none" }}>
+                <Text
+                  color="gray.200"
+                  cursor="pointer"
+                  _hover={{
+                    color: "red.500",
+                    cursor: "pointer",
+                  }}
+                  fontFamily="PlayFair Display"
+                  fontSize="1.125rem"
+                >
+                  PROJECTS
+                </Text>
+              </ChakraLink>
+            </Link>
           </HStack>
           <Box alignSelf="flex-end" h="5px" w="100vw" bgColor="red.500"></Box>
         </VStack>
