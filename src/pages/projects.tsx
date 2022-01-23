@@ -2,15 +2,16 @@ import {
   Box,
   Flex,
   IconButton,
-  Text,
   VStack,
   Link as ChakraLink,
   HStack,
+  Center,
+  Button,
 } from "@chakra-ui/react";
-import WorkList from "../components/workList";
+import WorkList from "../components/WorkList";
 import Link from "next/link";
 import { ArrowBackIcon } from "@chakra-ui/icons";
-import WorkItemTest from "../components/WorkItemTest";
+import WorkNavigator from "../components/WorkNavigator";
 
 export default function Projects() {
   return (
@@ -35,12 +36,44 @@ export default function Projects() {
 
       <VStack mt="5rem" ml="6rem">
         <HStack spacing="10">
-          <WorkItemTest />
+          <WorkList />
         </HStack>
       </VStack>
 
-      <Flex position="absolute" right="12rem" top="8rem">
-        <Box borderRadius="100%" h="38rem" w="38rem" bgColor="red.500" />
+      <Flex position="relative" right="0" top="2rem">
+        <Center h="100%" w="100%">
+          <HStack spacing="14" zIndex="3" position="absolute" top="8rem">
+            <Button
+              fontFamily=" PlayFair Display"
+              fontStyle="italic"
+              fontWeight="400"
+              colorScheme="gray"
+              variant="outline"
+            >
+              info
+            </Button>
+            <Button
+              fontFamily=" PlayFair Display"
+              fontStyle="italic"
+              fontWeight="400"
+              colorScheme="gray"
+              variant="outline"
+            >
+              live view
+            </Button>
+          </HStack>
+          <Box h="422px" w="825px" zIndex="2">
+            <WorkNavigator />
+          </Box>
+          <Box
+            zIndex="1"
+            position="absolute"
+            borderRadius="100%"
+            h="38rem"
+            w="38rem"
+            bgColor="red.500"
+          />
+        </Center>
       </Flex>
     </Flex>
   );
