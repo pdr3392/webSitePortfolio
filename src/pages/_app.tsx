@@ -6,11 +6,11 @@ import { Provider } from "react-redux";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>
+      <Provider store={store}>
         <Component {...pageProps} />
-      </ChakraProvider>
-    </Provider>
+      </Provider>
+    </ChakraProvider>
   );
 }
 

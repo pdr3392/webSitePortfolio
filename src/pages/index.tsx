@@ -1,22 +1,40 @@
 import {
-  Divider,
   Center,
   Flex,
   Text,
   Box,
   VStack,
   HStack,
-  Grid,
   Link as ChakraLink,
-  GridItem,
+  Icon,
+  IconButton,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import ReactCountryFlag from "react-country-flag";
 import CodeHero from "../components/CodeHero";
 import { SiTypescript, SiJavascript, SiPython } from "react-icons/si";
+import { useSelector, useDispatch } from "react-redux";
+import { changeLanguage } from "../redux/language";
+import { useEffect } from "react";
+
+interface LanguageStateProps {
+  language: {
+    languageState: string;
+  };
+}
 
 export default function Index() {
+  const language = useSelector<LanguageStateProps>(
+    (state) => state.language.languageState
+  );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log(language);
+  }, [language]);
+
   return (
     <Flex w="100vw" h="100vh" position="relative" overflow="hidden">
       <Flex h="7rem" overflow="hidden">
@@ -102,20 +120,28 @@ export default function Index() {
         </VStack>
         <Box position="absolute" top="3rem" right="1rem">
           <ReactCountryFlag
+            onClick={() => dispatch(changeLanguage("pt-BR"))}
+            onMouseOver={({ target }) => (target.style.opacity = 1)}
+            onMouseLeave={({ target }) => (target.style.opacity = 0.4)}
             style={{
+              transition: "opacity .2s",
+              opacity: ".4",
+              cursor: "pointer",
               marginRight: "2rem",
               width: "40px",
               objectFit: "cover",
               borderRadius: "100%",
               height: "40px",
             }}
-            className="emojiFlag"
+            className="emojiBrFlag"
             countryCode="BR"
             svg
             aria-label="pt-BR"
           />
           <ReactCountryFlag
+            onClick={() => dispatch(changeLanguage("en-US"))}
             style={{
+              cursor: "pointer",
               marginRight: "2rem",
               width: "40px",
               objectFit: "cover",
@@ -143,7 +169,6 @@ export default function Index() {
               <Text
                 w="75%"
                 fontSize=".8rem"
-                textJustify="inter-word"
                 textAlign="justify"
                 fontFamily="Playfair Display"
                 color="gray.200"
