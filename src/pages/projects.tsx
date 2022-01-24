@@ -12,8 +12,25 @@ import WorkList from "../components/WorkList";
 import Link from "next/link";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import WorkNavigator from "../components/WorkNavigator";
+import { useSelector, useDispatch } from "react-redux";
+import { changeWork } from "../redux/work";
+import { useEffect } from "react";
+
+interface WorkStateProps {
+  work: {
+    navState: string;
+  };
+}
 
 export default function Projects() {
+  const work = useSelector<WorkStateProps>((state) => state.work.navState);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log(work);
+  }, [work]);
+
   return (
     <Flex w="100vw" h="100vh" position="relative" overflow="hidden">
       <Link href={`/`} passHref>
@@ -42,27 +59,7 @@ export default function Projects() {
 
       <Flex position="relative" right="0" top="2rem">
         <Center h="100%" w="100%">
-          <HStack spacing="14" zIndex="3" position="absolute" top="8rem">
-            <Button
-              fontFamily=" PlayFair Display"
-              fontStyle="italic"
-              fontWeight="400"
-              colorScheme="gray"
-              variant="outline"
-            >
-              info
-            </Button>
-            <Button
-              fontFamily=" PlayFair Display"
-              fontStyle="italic"
-              fontWeight="400"
-              colorScheme="gray"
-              variant="outline"
-            >
-              live view
-            </Button>
-          </HStack>
-          <Box h="422px" w="825px" zIndex="2">
+          <Box h="450px" w="825px" zIndex="2">
             <WorkNavigator />
           </Box>
           <Box

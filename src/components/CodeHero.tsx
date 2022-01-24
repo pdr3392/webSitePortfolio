@@ -181,9 +181,7 @@ export default function CodeHero() {
           `}
       </code>
       <br />
-      {`
-          }
-        `}
+      <code>{`}`}</code>
     </Text>
   );
 }

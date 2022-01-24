@@ -6,8 +6,6 @@ import {
   VStack,
   HStack,
   Link as ChakraLink,
-  Icon,
-  IconButton,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -140,7 +138,11 @@ export default function Index() {
           />
           <ReactCountryFlag
             onClick={() => dispatch(changeLanguage("en-US"))}
+            onMouseOver={({ target }) => (target.style.opacity = 1)}
+            onMouseLeave={({ target }) => (target.style.opacity = 0.4)}
             style={{
+              transition: "opacity .2s",
+              opacity: ".4",
               cursor: "pointer",
               marginRight: "2rem",
               width: "40px",
