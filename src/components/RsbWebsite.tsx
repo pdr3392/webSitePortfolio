@@ -1,10 +1,7 @@
-import { Box, Button, Center, Flex, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, Center, Flex, HStack } from "@chakra-ui/react";
 import Image from "next/image";
-import { useState } from "react";
 
-export default function IgniteFromScratch() {
-  const [infoModal, setInfoModal] = useState(false);
-
+export default function RsbWebsite() {
   return (
     <Flex h="100%" w="100%" overflow="hidden">
       <Center w="100%">
@@ -50,29 +47,11 @@ export default function IgniteFromScratch() {
         overflow="hidden"
         borderRadius="20px"
       >
-        <Box
-          position="absolute"
-          zIndex="5"
-          bgColor="gray.200"
-          h="100%"
-          w="100%"
-          opacity=".7"
-        >
-          <Box bgColor="gray.200">
-            <Text>
-              project developed for Rocketseat's Ignite training program
-              <br />
-              <br />
-              Tools used:
-              <br />- NextJS - ChakraUI
-            </Text>
-          </Box>
-        </Box>
         <Image
           layout="fill"
           objectPosition="top"
           objectFit="cover"
-          src="/images/igniteFromScratch.png"
+          src="/images/igNews.png"
         />
       </Box>
     </Flex>

@@ -7,6 +7,7 @@ import {
   HStack,
   Center,
   Button,
+  Text,
 } from "@chakra-ui/react";
 import WorkList from "../components/WorkList";
 import Link from "next/link";
@@ -57,17 +58,17 @@ export default function Projects() {
         </HStack>
       </VStack>
 
-      <Flex position="relative" right="0" top="2rem">
+      <Flex position="relative" right="-3rem" top="2rem">
         <Center h="100%" w="100%">
-          <Box h="450px" w="825px" zIndex="2">
+          <Box h="670px" w="825px" zIndex="2">
             <WorkNavigator />
           </Box>
           <Box
             zIndex="1"
             position="absolute"
-            borderRadius="100%"
-            h="38rem"
-            w="38rem"
+            h="100vw"
+            w="55.5rem"
+            right="-2rem"
             bgColor="red.500"
           />
         </Center>
