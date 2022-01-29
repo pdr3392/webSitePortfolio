@@ -1,8 +1,14 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
+import DashGo from "./DashGo";
+import EightDec from "./EightDec";
 import IgNews from "./IgNews";
+import IgniteCart from "./IgniteCart";
+import IgniteDtMoney from "./IgniteDtMoney";
+import IgniteFood from "./IgniteFood";
 import IgniteFromScratch from "./IgniteFromScratch";
 import RsbWebsite from "./RsbWebsite";
+import WorldTrip from "./WorldTrip";
 
 interface WorkStateProps {
   work: {
@@ -36,6 +42,18 @@ export default function WorkNavigator() {
         return <IgNews />;
       case "rsbinvestimentos.com.br":
         return <RsbWebsite />;
+      case "dashgo":
+        return <DashGo />;
+      case "worldTrip":
+        return <WorldTrip />;
+      case "igniteFood":
+        return <IgniteFood />;
+      case "igniteCart":
+        return <IgniteCart />;
+      case "igniteDtMoney":
+        return <IgniteDtMoney />;
+      case "8/12/2021":
+        return <EightDec />;
     }
   }
 

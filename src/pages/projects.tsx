@@ -58,21 +58,11 @@ export default function Projects() {
         </HStack>
       </VStack>
 
-      <Flex position="relative" right="-3rem" top="2rem">
-        <Center h="100%" w="100%">
-          <Box h="670px" w="825px" zIndex="2">
-            <WorkNavigator />
-          </Box>
-          <Box
-            zIndex="1"
-            position="absolute"
-            h="100vw"
-            w="55.5rem"
-            right="-2rem"
-            bgColor="red.500"
-          />
-        </Center>
-      </Flex>
+      <Box h="100%" top="0" w="800px" position="absolute" right="0">
+        <Box bgColor="red.500" h="100%" w="100%" position="relative">
+          <WorkNavigator />
+        </Box>
+      </Box>
     </Flex>
   );
 }

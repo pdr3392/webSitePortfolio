@@ -3,6 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../styles/theme";
 import store from "../redux/store";
 import { Provider } from "react-redux";
+import "../styles/swiperStyles.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

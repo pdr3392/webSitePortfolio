@@ -3,13 +3,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function IgniteFromScratch() {
-  const [infoModal, setInfoModal] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
   return (
     <Flex h="100%" w="100%" overflow="hidden">
       <Center w="100%">
         <HStack spacing="14" zIndex="3" position="absolute" top="-3.5rem">
           <Button
+            onClick={() => setShowInfo(!showInfo)}
             _hover={{
               bgColor: "red.500",
               outline: "1px solid white",
@@ -50,24 +51,29 @@ export default function IgniteFromScratch() {
         overflow="hidden"
         borderRadius="20px"
       >
-        <Box
-          position="absolute"
-          zIndex="5"
-          bgColor="gray.200"
-          h="100%"
-          w="100%"
-          opacity=".7"
-        >
-          <Box bgColor="gray.200">
-            <Text>
-              project developed for Rocketseat's Ignite training program
-              <br />
-              <br />
-              Tools used:
-              <br />- NextJS - ChakraUI
-            </Text>
-          </Box>
-        </Box>
+        {showInfo && (
+          <Flex
+            align="center"
+            justify="center"
+            position="absolute"
+            zIndex="5"
+            color="gray.200"
+            bgColor="black"
+            h="30%"
+            w="100%"
+          >
+            <Box>
+              <Text>
+                project developed for Rocketseat's Ignite training program
+                <br />
+                <br />
+                Tools used:
+                <br />- NextJS
+                <br />- ChakraUI
+              </Text>
+            </Box>
+          </Flex>
+        )}
         <Image
           layout="fill"
           objectPosition="top"
