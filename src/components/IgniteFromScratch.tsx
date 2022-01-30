@@ -1,14 +1,23 @@
-import { Box, Button, Center, Flex, HStack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  HStack,
+  Text,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
-export default function IgniteFromScratch() {
+export default function DashGo() {
   const [showInfo, setShowInfo] = useState(false);
 
   return (
-    <Flex h="100%" w="100%" overflow="hidden">
+    <Flex h="100%" w="100%" overflow="hidden" justify="center">
       <Center w="100%">
-        <HStack spacing="14" zIndex="3" position="absolute" top="-3.5rem">
+        <HStack spacing="14" zIndex="3" position="absolute" top="3.5rem">
           <Button
             onClick={() => setShowInfo(!showInfo)}
             _hover={{
@@ -25,27 +34,32 @@ export default function IgniteFromScratch() {
           >
             info
           </Button>
-          <Button
-            _hover={{
-              bgColor: "red.500",
-              outline: "1px solid white",
-              outlineOffset: "-1px",
-              color: "white",
-            }}
-            fontFamily=" PlayFair Display"
-            fontStyle="italic"
-            fontWeight="400"
-            colorScheme="gray"
-            variant="solid"
-          >
-            live view
-          </Button>
+          <Link href={`/ignitefromscratch`} passHref>
+            <ChakraLink style={{ textDecoration: "none" }}>
+              <Button
+                _hover={{
+                  bgColor: "red.500",
+                  outline: "1px solid white",
+                  outlineOffset: "-1px",
+                  color: "white",
+                }}
+                fontFamily=" PlayFair Display"
+                fontStyle="italic"
+                fontWeight="400"
+                colorScheme="gray"
+                variant="solid"
+              >
+                live view
+              </Button>
+            </ChakraLink>
+          </Link>
         </HStack>
       </Center>
 
       <Box
-        w="100%"
-        h="100%"
+        w="80%"
+        h="650px"
+        bottom="1rem"
         position="absolute"
         zIndex="2"
         overflow="hidden"

@@ -38,9 +38,9 @@ export default function SecondRoll() {
           <SwiperSlide>
             <Image
               placeholder="blur"
-              blurDataURL={blurHash({ hash: "L8G+UM~q_3RjRjIUM{Rjxuofj[xu" })}
+              blurDataURL={blurHash({ hash: "LEBM_P~qxuIU4n9FM{t7ofxuxut7" })}
               quality="40"
-              src="/images/firstroll/firstroll1.jpg"
+              src="/images/secondroll/tiff020.jpg"
               layout="fill"
               priority
             />
@@ -48,9 +48,9 @@ export default function SecondRoll() {
           <SwiperSlide>
             <Image
               placeholder="blur"
-              blurDataURL={blurHash({ hash: "LhH2crD%WBt7~qofWBof_3ofWBj[" })}
+              blurDataURL={blurHash({ hash: "LTG+UM9F-;M{~qRjWBWB00xuIUt7" })}
               quality="40"
-              src="/images/firstroll/firstroll2.jpg"
+              src="/images/secondroll/tiff025.jpg"
               layout="fill"
               priority
             />
@@ -58,9 +58,9 @@ export default function SecondRoll() {
           <SwiperSlide>
             <Image
               placeholder="blur"
-              blurDataURL={blurHash({ hash: "LjJuAaofWBxu~qRjRjt7WBM{WBj[" })}
+              blurDataURL={blurHash({ hash: "LJFr;XD%IUM{~qM{of%M00%Mt7t7" })}
               quality="40"
-              src="/images/firstroll/firstroll3.jpg"
+              src="/images/secondroll/tiff030.jpg"
               layout="fill"
               priority
             />
@@ -68,9 +68,19 @@ export default function SecondRoll() {
           <SwiperSlide>
             <Image
               placeholder="blur"
-              blurDataURL={blurHash({ hash: "L@N^e:~qt7IUt7Rjt7WBRjoft7WB" })}
+              blurDataURL={blurHash({ hash: "L,K-qPxuRjj[~qofWBj[M{ayj[j[" })}
               quality="40"
-              src="/images/firstroll/firstroll4.jpg"
+              src="/images/secondroll/tiff033.jpg"
+              layout="fill"
+              priority
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              placeholder="blur"
+              blurDataURL={blurHash({ hash: "LFHC1R4nRj%M-;M{j[t7~qofM{j[" })}
+              quality="40"
+              src="/images/secondroll/tiff062.jpg"
               layout="fill"
               priority
             />

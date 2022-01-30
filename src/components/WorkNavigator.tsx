@@ -1,5 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
+import Bookends from "./Bookends";
+import Collages from "./Collages";
 import DashGo from "./DashGo";
 import EightDec from "./EightDec";
 import FirstRoll from "./FirstRoll";
@@ -11,6 +13,7 @@ import IgniteFromScratch from "./IgniteFromScratch";
 import MczNarua from "./MczNaRua";
 import RsbWebsite from "./RsbWebsite";
 import SecondRoll from "./SecondRoll";
+import ThirdRoll from "./ThirdRoll";
 import WorldTrip from "./WorldTrip";
 
 interface WorkStateProps {
@@ -27,6 +30,7 @@ export default function WorkNavigator() {
       case "intro":
         return (
           <Text
+            mt="4rem"
             maxW="100%"
             maxH="100%"
             fontFamily="PlayFair Display"
@@ -63,6 +67,12 @@ export default function WorkNavigator() {
         return <FirstRoll />;
       case "second roll":
         return <SecondRoll />;
+      case "third roll":
+        return <ThirdRoll />;
+      case "bookends":
+        return <Bookends />;
+      case "collages":
+        return <Collages />;
     }
   }
 

@@ -29,8 +29,8 @@ export default function WorkList() {
       <WorkItemTest workName="first roll" workInfo="photography" />
       <WorkItemTest workName="second roll" workInfo="photography" />
       <WorkItemTest workName="third roll" workInfo="photography" />
-      <WorkItemTest workName="bookends" workInfo="photography" />
       <br />
+      <WorkItemTest workName="bookends" workInfo="visual arts" />
       <WorkItemTest workName="collages" workInfo="visual arts" />
     </Box>
   );

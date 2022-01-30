@@ -2,13 +2,13 @@ import { Box, Button, Center, Flex, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function IgniteFood() {
+export default function DashGo() {
   const [showInfo, setShowInfo] = useState(false);
 
   return (
-    <Flex h="100%" w="100%" overflow="hidden">
+    <Flex h="100%" w="100%" overflow="hidden" justify="center">
       <Center w="100%">
-        <HStack spacing="14" zIndex="3" position="absolute" top="-3.5rem">
+        <HStack spacing="14" zIndex="3" position="absolute" top="3.5rem">
           <Button
             onClick={() => setShowInfo(!showInfo)}
             _hover={{
@@ -44,8 +44,9 @@ export default function IgniteFood() {
       </Center>
 
       <Box
-        w="100%"
-        h="100%"
+        w="80%"
+        h="650px"
+        bottom="1rem"
         position="absolute"
         zIndex="2"
         overflow="hidden"
