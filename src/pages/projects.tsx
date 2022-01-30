@@ -58,7 +58,7 @@ export default function Projects() {
         </HStack>
       </VStack>
 
-      <Box h="100%" top="0" w="900px" position="absolute" right="0">
+      <Box h="100%" top="0" w="800px" position="absolute" right="0">
         <Box bgColor="red.500" h="100%" w="100%" position="relative">
           <WorkNavigator />
         </Box>

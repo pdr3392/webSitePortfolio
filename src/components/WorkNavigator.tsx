@@ -2,12 +2,15 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import DashGo from "./DashGo";
 import EightDec from "./EightDec";
+import FirstRoll from "./FirstRoll";
 import IgNews from "./IgNews";
 import IgniteCart from "./IgniteCart";
 import IgniteDtMoney from "./IgniteDtMoney";
 import IgniteFood from "./IgniteFood";
 import IgniteFromScratch from "./IgniteFromScratch";
+import MczNarua from "./MczNaRua";
 import RsbWebsite from "./RsbWebsite";
+import SecondRoll from "./SecondRoll";
 import WorldTrip from "./WorldTrip";
 
 interface WorkStateProps {
@@ -54,6 +57,12 @@ export default function WorkNavigator() {
         return <IgniteDtMoney />;
       case "8/12/2021":
         return <EightDec />;
+      case "mcz na rua":
+        return <MczNarua />;
+      case "first roll":
+        return <FirstRoll />;
+      case "second roll":
+        return <SecondRoll />;
     }
   }
 
